@@ -1,0 +1,26 @@
+var r=20;
+var a;
+var t=0;
+var r0;
+function setup() { 
+  createCanvas(400, 400);
+}
+function draw(){ 
+  background(220); 
+  for(var i=30;i>0;i--){
+    fill(220);
+    if(i%2==0){ 
+      t0=sin((t-(PI/30)*i));
+      if(t0>0)
+        r0=r*t0; 
+      else 
+        r0=0;
+      ellipse(200,200,r*i+r0,r*i+r0);
+     }
+    else{
+      fill(0);
+      ellipse(200,200,r*i,r*i);
+    } 
+  }
+  t+=0.05;
+}
